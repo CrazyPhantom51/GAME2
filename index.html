@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emberdeep Web</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Emberdeep: Chromebook Edition</h1>
+      <p class="subtitle">Single-player D20-inspired RPG that runs fully in your browser.</p>
+    </header>
+
+    <section id="auth" class="panel">
+      <h2>Start or Load Hero</h2>
+      <label>Username <input id="username" type="text" maxlength="24" placeholder="adventurer" /></label>
+      <button id="startBtn">Start Game</button>
+      <p class="hint">Saves are stored in this browser using localStorage.</p>
+    </section>
+
+    <section id="game" class="hidden">
+      <div class="grid">
+        <section class="panel">
+          <h2>Hero</h2>
+          <div id="sheet"></div>
+        </section>
+        <section class="panel">
+          <h2>World Log</h2>
+          <div id="log" class="log"></div>
+        </section>
+      </div>
+
+      <section class="panel">
+        <h2>Actions</h2>
+        <div class="actions">
+          <button data-action="explore">Explore</button>
+          <button data-action="battle">Battle</button>
+          <button data-action="rest">Rest</button>
+          <button data-action="shop">Shop</button>
+          <button data-action="save">Save</button>
+          <button data-action="newrun">New Random Run</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="webgame.js"></script>
+</body>
+</html>
